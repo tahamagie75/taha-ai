@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha AI</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 20px auto; padding: 15px; background-color: #f9f9f9; border-radius: 8px; }
+        h1, h2 { color: #333; }
+        textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px; }
+        button { padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; background-color: #007bff; color: white; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+        #micButton { background-color: #6c757d; }
+        #micButton:hover { background-color: #5a6268; }
+        #result-area { background-color: #e9ecef; padding: 15px; min-height: 100px; border-radius: 4px; white-space: pre-wrap; }
+        #status { color: #666; font-size: 14px; height: 20px; }
+    </style>
+</head>
+<body>
+    <h1>مشروع طه للذكاء الاصطناعي</h1>
+    <p>اختر مهمة ثم اكتب طلبك أو استخدم الميكروفون.</p>
+
+    <select id="task-select" style="padding: 10px; margin-bottom: 10px; width: 100%;">
+        <option value="أجب على هذا السؤال:">سؤال وجواب</option>
+        <option value="لخص هذا النص:">تلخيص نص</option>
+        <option value="ترجم هذا إلى الإنجليزية:">ترجمة إلى الإنجليزية</option>
+        <option value="اكتب لي قصيدة عن:">كتابة قصيدة</option>
+    </select>
+
+    <textarea id="user-input" rows="5" placeholder="اكتب طلبك هنا..."></textarea>
+    
+    <div>
+        <button id="execute-btn">نفّذ المهمة</button>
+        <button id="micButton" title="انقر للتحدث">🎤</button>
+    </div>
+    
+    <p id="status"></p>
+
+    <h2>النتيجة:</h2>
+    <div id="result-area"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
